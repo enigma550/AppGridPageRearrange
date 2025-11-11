@@ -1,0 +1,8 @@
+{
+  "name": "App Grid Page Rearrange",
+  "description": "Move pages left or right in Gnome's app grid overview, or set them as the first or last page.",
+  "uuid": "AppGridPageRearrange@enigma550.github.com",
+  "shell-version": ["49"],
+  "version-name": "1.0.0",
+  "url": "https://github.com/enigma550/AppGridPageRearrange"
+}
