@@ -3,6 +3,10 @@
 A simple GNOME Shell extension that adds a context menu to the app grid page indicators (the dots) to allow you to reorder your app pages.
 
 <div align="center">
+    <img src="./public/logo.svg" alt="App Grid Page Rearrange Logo" width="128">
+</div>
+
+<div align="center">
 <!-- Badges -->
   <img src="https://img.shields.io/badge/GNOME-49-blue.svg?style=for-the-badge&logo=gnome" alt="GNOME 49">
   <a href="https://github.com/enigma550/AppGridPageRearrange/releases/latest">
