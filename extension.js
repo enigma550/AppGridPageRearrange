@@ -18,7 +18,6 @@ import * as Main from "resource:///org/gnome/shell/ui/main.js";
 import * as PopupMenu from "resource:///org/gnome/shell/ui/popupMenu.js";
 import St from "gi://St";
 import GLib from "gi://GLib";
-import { Logger } from "./utils/logger.js";
 import { PageMover } from "./utils/pageMover.js";
 import { createHorizontalButtonRow } from "./utils/ui.js";
 
@@ -40,9 +39,8 @@ export default class AppGridPageRearrangeExtension extends Extension {
    * Enables the extension, initializes menu and listeners.
    */
   enable() {
-    // 1. Instantiate Logger (pass metadata)
-    this._logger = new Logger(this._metadata);
-    this._logger.info("Extension enabled.");
+    // 1. Announce extension enabled
+    this.getLogger().log("Extension enabled.");
 
     // 2. Instantiate all class properties
     this._pageIndicators = null;
@@ -101,7 +99,7 @@ export default class AppGridPageRearrangeExtension extends Extension {
       if (appDisplay) {
         this._appDisplay = appDisplay;
         // 6. Instantiate PageMover now that we have appDisplay
-        this._pageMover = new PageMover(this._logger, this._appDisplay);
+        this._pageMover = new PageMover(this.getLogger(), this._appDisplay);
         this._initializeAppDisplayListeners();
       }
       return GLib.SOURCE_REMOVE;
@@ -181,9 +179,7 @@ export default class AppGridPageRearrangeExtension extends Extension {
    * Disables the extension and clears global references.
    */
   disable() {
-    // Use optional chaining (?.) This ensures that if enable()
-    // fails before _logger is created, disable() won't crash.
-    this._logger?.info("Extension disabled.");
+    this.getLogger().log("Extension disabled.");
 
     // Disconnect signals
     if (this._overviewShowSignalId) {
@@ -201,13 +197,6 @@ export default class AppGridPageRearrangeExtension extends Extension {
     // Destroy menu
     this._menu?.destroy();
     this._menu = null;
-    this._menuManager = null; // No destroy() method, just null it.
-
-    // Destroy logger
-    this._logger = null;
-  }
-
-  destroy() {
-    this.disable();
+    this._menuManager = null; // No destroy() method exists in PopupMenu.PopupMenuManager class, just null it.
   }
 }
