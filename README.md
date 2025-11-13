@@ -1,3 +1,12 @@
+<div align="right">
+<!-- Badges -->
+  <img src="https://img.shields.io/badge/GNOME-49-blue.svg?style=for-the-badge&logo=gnome" alt="GNOME 49">
+  <img src="https://img.shields.io/gnome-extensions/dt/AppGridPageRearrange%40enigma550.github.com?style=for-the-badge" alt="Downloads">
+  <a href="https://www.gnu.org/licenses/gpl-3.0">
+    <img src="https://img.shields.io/github/license/enigma550/AppGridPageRearrange?style=for-the-badge" alt="License: GPL v3">
+  </a>
+</div>
+
 # **App Grid Page Rearrange**
 
 A simple GNOME Shell extension that adds a context menu to the app grid page indicators (the dots) to allow you to reorder your app pages.
@@ -6,15 +15,12 @@ A simple GNOME Shell extension that adds a context menu to the app grid page ind
     <img src="./public/logo.svg" alt="App Grid Page Rearrange Logo" width="128">
 </div>
 
+<br>
+
 <div align="center">
-<!-- Badges -->
-  <img src="https://img.shields.io/badge/GNOME-49-blue.svg?style=for-the-badge&logo=gnome" alt="GNOME 49">
-  <a href="https://github.com/enigma550/AppGridPageRearrange/releases/latest">
-    <img src="https://img.shields.io/github/v/release/enigma550/AppGridPageRearrange?label=Download&style=for-the-badge" alt="Download">
-  </a>
-  <a href="https://www.gnu.org/licenses/gpl-3.0">
-    <img src="https://img.shields.io/github/license/enigma550/AppGridPageRearrange?style=for-the-badge" alt="License: GPL v3">
-  </a>
+    <a href="https://extensions.gnome.org/extension/8832/app-grid-page-rearrange">
+        <img src="./public/get_it_on_gnome_extension.png" width="25%">
+    </a>
 </div>
 
 ## **Demonstration**
